@@ -187,6 +187,7 @@ h6 {
 .bg-white .card {
   box-shadow: none;
 }
+
 .box-shadow {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05) !important;
 }
@@ -2262,6 +2263,11 @@ textarea {
   border-radius: 5px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
+
+.dashbutton:hover {
+  box-shadow: 6px 6px #e5e7ea;
+}
+
 .card-subtitle {
   font-size: 12px;
   margin: 10px 0;

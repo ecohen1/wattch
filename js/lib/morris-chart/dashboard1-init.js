@@ -100,15 +100,14 @@ var XBoxreducer = (accumulator, currentValue) => accumulator + currentValue.XBox
 var piChartData = {
 	element: 'donut-example',
 	data: [
+		{label: "Fridge", value: lineChartData.data.reduce(Fridgereducer, 0)},
 		{label: "Television", value: lineChartData.data.reduce(TVreducer, 0)},
 		{label: "Lights", value: lineChartData.data.reduce(Lightsreducer, 0)},
 		{label: "AC", value: lineChartData.data.reduce(ACreducer, 0)},
-		{label: "Fridge", value: lineChartData.data.reduce(Fridgereducer, 0)},
 		{label: "XBox", value: lineChartData.data.reduce(XBoxreducer, 0)},
 	],
 	colors: lineChartData.lineColors
 }
-console.log(piChartData)
 Morris.Donut( piChartData );
 
 
