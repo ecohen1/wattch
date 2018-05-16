@@ -92,11 +92,13 @@ body {
   margin: 0;
   overflow-x: hidden;
   color: #67757c;
+  overflow-y: hidden;
 }
 html {
   position: relative;
   min-height: 100%;
   background: #ffffff;
+  zoom: 75%;
 }
 a:focus,
 a:hover {
@@ -1140,7 +1142,7 @@ html {
 }
 
 .dashbutton {
-  height: 90%;
+  /* height: 90%; */
 }
 
 .header .top-navbar .mailbox ul {
