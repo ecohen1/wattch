@@ -12,7 +12,7 @@ $( function () {
 				AC: 8,
 				Fridge: 28,
 				XBox: 5,
-				Total: 96
+				// Total: 96
         }, {
 				period: '2018-05-02',
 				Television: 32,
@@ -20,7 +20,7 @@ $( function () {
 				AC: 9,
 				Fridge: 27,
 				XBox: 5,
-				Total: 94
+				// Total: 94
         }, {
 				period: '2018-05-03',
 				Television: 25,
@@ -28,7 +28,7 @@ $( function () {
 				AC: 12,
 				Fridge: 30,
 				XBox: 5,
-				Total: 94
+				// Total: 94
         }, {
 				period: '2018-05-04',
 				Television: 20,
@@ -36,7 +36,7 @@ $( function () {
 				AC: 5,
 				Fridge: 30,
 				XBox: 5,
-				Total: 94
+				// Total: 94
         }, {
 				period: '2018-05-05',
 				Television: 23,
@@ -44,7 +44,7 @@ $( function () {
 				AC: 7,
 				Fridge: 35,
 				XBox: 5,
-				Total: 94
+				// Total: 94
         }, {
 				period: '2018-05-06',
 				Television: 17,
@@ -52,7 +52,7 @@ $( function () {
 				AC: 7,
 				Fridge: 43,
 				XBox: 5,
-				Total: 94
+				// Total: 94
         }, {
 				period: '2018-05-07',
 				Television: 15,
@@ -60,14 +60,14 @@ $( function () {
 				AC: 10,
 				Fridge: 45,
 				XBox: 5,
-				Total: 94
+				// Total: 94
 				}
       ],
 		lineColors: [ '#26DAD2', '#fc6180', '#62d1f3', '#ffb64d', '#4680ff', '#ABC123' ],
 		xkey: 'period',
-		ykeys: [ 'Television', 'Lights', 'Fridge', 'AC', 'XBox', 'Total' ],
+		ykeys: [ 'Television', 'Lights', 'Fridge', 'AC', 'XBox' ],
 		// goals: [75],
-		labels: [ 'Television', 'Lights', 'Fridge', 'AC', 'XBox', 'Total'  ],
+		labels: [ 'Television', 'Lights', 'Fridge', 'AC', 'XBox'  ],
 		pointSize: 6,
 		lineWidth: 3,
 		resize: true,
@@ -77,19 +77,7 @@ $( function () {
 		// hideHover: 'auto'
 
 	};
-Morris.Area( lineChartData );
-
-// Morris.Donut({
-// 	element: 'donut-example',
-// 	data: [
-// 		{label: "Television", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.Television)},
-// 		// {label: "Lights", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.Lights)},
-// 		// {label: "AC", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.AC)},
-// 		// {label: "Fridge", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.Fridge)},
-// 		// {label: "XBox", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.XBox)},
-// 		// {label: "Total", value: lineChartData.data.reduce((accumulator, currentValue) => accumulator + currentValue.Total)}
-// 	]
-// });
+Morris.Line( lineChartData );
 
 var TVreducer = (accumulator, currentValue) => accumulator + currentValue.Television
 var Lightsreducer = (accumulator, currentValue) => accumulator + currentValue.Lights
