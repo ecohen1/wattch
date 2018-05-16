@@ -87,18 +87,19 @@
   outline: none;
 }
 body {
-  background: #fff;
+  /* background: #fff; */
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
   color: #67757c;
+  background-color: #fafafa;
+
   overflow-y: hidden;
 }
 html {
   position: relative;
   min-height: 100%;
-  background: #ffffff;
-  zoom: 75%;
+  /* background: #ffffff; */
 }
 a:focus,
 a:hover {
@@ -1138,11 +1139,12 @@ h6.h1 {
 html {
   /* width: 90%; */
   /* margin-left: 5%; */
+  zoom: 75%;
   background-color: #fafafa;
 }
 
 .dashbutton {
-  /* height: 90%; */
+  height: 85%;
 }
 
 .header .top-navbar .mailbox ul {
