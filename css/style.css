@@ -1148,9 +1148,8 @@ html {
 }
 
 .hr-appliance {
-  /* size: 20px; */
   border: none;
-  border-bottom: 3px solid black;
+  border-bottom: 0.25em solid black;
 }
 
 .header .top-navbar .mailbox ul {
