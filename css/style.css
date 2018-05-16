@@ -214,6 +214,18 @@ h6 {
 .container-fluid {
   padding: 0 30px 25px;
 }
+.welcometext {
+  font-size: 3em;
+  width: 90%;
+  margin-left: 5%;
+  margin-bottom: 0;
+}
+.infotext {
+  font-size: 2em;
+  width: 50%;
+  margin-left: 25%;
+  color: orange;
+}
 @media (min-width: 1024px) {
   .page-wrapper {
     margin-left: 0px;
@@ -1120,6 +1132,17 @@ h6.h1 {
 .header .top-navbar .mailbox {
   width: 300px;
 }
+
+html {
+  /* width: 90%; */
+  /* margin-left: 5%; */
+  background-color: #fafafa;
+}
+
+.dashbutton {
+  height: 90%;
+}
+
 .header .top-navbar .mailbox ul {
   padding: 0;
 }
@@ -1127,7 +1150,7 @@ h6.h1 {
   list-style: none;
 }
 .header .profile-pic {
-  width: 30px;
+  width: 60px;
   border-radius: 100%;
 }
 .header .dropdown-menu {
@@ -1937,6 +1960,20 @@ textarea {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.currentcrumb {
+  color: #0b9ee8;
+}
+
+.breadcrumb-item {
+  font-size: 1.5em;
+}
+
+.navaccount {
+    position: absolute;
+    right: 0;
+}
+
 .page-titles .breadcrumb .breadcrumb-item + .breadcrumb-item:before {
   content: "\e649";
   font-family: themify;
@@ -2264,8 +2301,19 @@ textarea {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.dashbutton:hover {
+.dashbutton {
   box-shadow: 6px 6px #e5e7ea;
+  padding-left: 12%;
+  padding-right: 12%;
+}
+
+.dashbuttoncontainer {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.dashbutton:hover {
+  box-shadow: 10px 10px #e5e7ea;
 }
 
 .card-subtitle {
@@ -2314,6 +2362,7 @@ textarea {
   background: #1976d2 none repeat scroll 0 0;
   border: 0 none;
   color: #ffffff;
+
 }
 .customvtab .tabs-vertical li .nav-link.active,
 .customvtab .tabs-vertical li .nav-link:focus,
@@ -6188,6 +6237,9 @@ tbody tr td:last-child {
 .media-body p {
   color: #99abb4;
   line-height: 15px;
+}
+.dashbuttontitle {
+  font-size: 1.8em;
 }
 .example {
   overflow: hidden;
