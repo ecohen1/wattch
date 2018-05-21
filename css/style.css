@@ -94,7 +94,7 @@ body {
   color: #67757c;
   background-color: #fafafa;
 
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 html {
   position: relative;
