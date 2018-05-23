@@ -31,7 +31,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar">
+<body class="fix-header fix-sidebar" style="overflow: hidden !important">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -90,28 +90,18 @@
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
-            <div class="container-fluid" style="zoom: 75%">
+            <div class="container-fluid">
 
-                <div class="row bg-white m-l-0 m-r-0 box-shadow ">
+                <div class="row bg-white m-l-0 m-r-0 box-shadow">
 
                     <!-- column -->
                     <div class="col-lg-4">
-                        <div class="card">
-                            <div id="donut-example-plotly"></div>
-                            <div style="text-align: center">
-                              <!-- <h2>Cumulative Usage This Month</h2> -->
-                            </div>
-                        </div>
+                        <div id="donut-example-plotly"></div>
                     </div>
 
                     <!-- column -->
                     <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- <h4 class="card-title">Daily Energy Usage by Appliance (kW)</h4> -->
-                                <div id="extra-area-chart-plotly"></div>
-                            </div>
-                        </div>
+                        <div id="extra-area-chart-plotly"></div>
                     </div>
                     <!-- column -->
 
@@ -224,7 +214,8 @@
           range: [0, 50],
           type: 'linear'
         },
-        height: 600,
+        // showlegend: false,
+        height: 450,
       };
       Plotly.newPlot('extra-area-chart-plotly', lineChartData, layoutLine, {displayModeBar: false});
 
@@ -236,6 +227,11 @@
           data['Fridge'].reduce((a,b)=>a+b,0),
           data['XBox'].reduce((a,b)=>a+b,0)
         ],
+        textfont: {
+          family: 'sans serif',
+          size: 16,
+          color: 'white'
+        },
         labels: ['Television','Lights','AC','Fridge','XBox'],
         name: 'Cumulative Usage This Month',
         hoverinfo: 'label+value+percent',
@@ -248,6 +244,10 @@
 
       var layoutDonut = {
         title: 'Cumulative Usage This Month',
+        // showlegend: false,
+        // legend: {
+        //   x:0,
+        // },
         // annotations: [
         //   {
         //     font: {
@@ -259,7 +259,7 @@
         //     y: 0.5
         //   }
         // ],
-        height: 600,
+        height: 450,
         // width: 600
         };
 
