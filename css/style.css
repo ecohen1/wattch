@@ -1149,7 +1149,7 @@ html {
 
 .hr-appliance {
   border: none;
-  border-bottom: 0.25em solid black;
+  border-bottom: 0.3em solid #98a9b3;
 }
 
 .header .top-navbar .mailbox ul {
