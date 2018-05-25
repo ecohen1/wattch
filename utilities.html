@@ -31,7 +31,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar" style="overflow: hidden !important">
+<body class="fix-header fix-sidebar">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -214,8 +214,12 @@
           range: [0, 50],
           type: 'linear'
         },
-        // showlegend: false,
+        showlegend: false,
         height: 450,
+        titlefont: {
+          size: 20,
+          color: '#475a64'
+        },
       };
       Plotly.newPlot('extra-area-chart-plotly', lineChartData, layoutLine, {displayModeBar: false});
 
@@ -234,18 +238,23 @@
         },
         labels: ['Television','Lights','AC','Fridge','XBox'],
         name: 'Cumulative Usage This Month',
-        hoverinfo: 'label+value+percent',
+        hoverinfo: 'label',
+        // hoverinfo: 'label+value+percent',
         hole: .4,
         type: 'pie',
         marker: {
           colors: [ '#26DAD2', '#fc6180', '#62d1f3', '#ffb64d', '#4680ff', '#ABC123' ],
         },
-        textinfo: 'percent'
+        textinfo: 'label'
       }];
 
       var layoutDonut = {
         title: 'Cumulative Usage This Month',
-        // showlegend: false,
+        showlegend: false,
+        titlefont: {
+          size: 20,
+          color: '#475a64'
+        },
         // legend: {
         //   x:0,
         // },

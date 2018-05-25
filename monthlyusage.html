@@ -31,7 +31,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar" style="overflow: hidden !important">
+<body class="fix-header fix-sidebar">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -215,6 +215,10 @@
         //   }
         // ]
         height: 450,
+        titlefont: {
+          size: 20,
+          color: '#475a64'
+        },
       };
       Plotly.newPlot('daily-usage-plotly', lineChartData, layoutLine, {displayModeBar: false});
 
@@ -275,6 +279,10 @@
         //   }
         // ]
         height: 450,
+        titlefont: {
+          size: 20,
+          color: '#475a64'
+        },
       };
       Plotly.newPlot('cumulatively-monthly-plotly', lineChartData, layoutLine, {displayModeBar: false});
 
