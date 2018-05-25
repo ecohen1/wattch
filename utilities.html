@@ -96,7 +96,8 @@
 
                     <!-- column -->
                     <div class="col-lg-4">
-                        <div id="donut-example-plotly"></div>
+                        <div id="donut-example-plotly">
+                        </div>
                     </div>
 
                     <!-- column -->
@@ -158,6 +159,7 @@
         'Fridge': [28,27,30,30,35,43,45],
         'XBox': [5,5,5,5,5,5,5],
       }
+
       var dates = ['2018-05-01','2018-05-02','2018-05-03','2018-05-04','2018-05-05','2018-05-06','2018-05-07']
 
       var lineChartData = [
@@ -238,6 +240,7 @@
         },
         labels: ['Television','Lights','AC','Fridge','XBox'],
         name: 'Cumulative Usage This Month',
+        textinfo: 'label',
         hoverinfo: 'label',
         // hoverinfo: 'label+value+percent',
         hole: .4,
@@ -245,7 +248,8 @@
         marker: {
           colors: [ '#26DAD2', '#fc6180', '#62d1f3', '#ffb64d', '#4680ff', '#ABC123' ],
         },
-        textinfo: 'label'
+        // text: 'test',
+        // textposition: 'inside',
       }];
 
       var layoutDonut = {
@@ -255,6 +259,17 @@
           size: 20,
           color: '#475a64'
         },
+        annotations: [
+          {
+            font: {
+              size: 20
+            },
+            showarrow: false,
+            text: '',
+            x: 0.51,
+            y: 0.48
+          },
+        ],
         // legend: {
         //   x:0,
         // },
@@ -274,6 +289,23 @@
         };
 
       Plotly.newPlot('donut-example-plotly', donutChartData, layoutDonut, {displayModeBar: false});
+
+      // $('.surface').hover((e)=>console.log(e.target))
+      $('g .slice').hover((e)=>{
+        var appliance = $($(e)[0].currentTarget.children[1]).html().toString().split('>')[1].split('<')[0];
+        // console.log(appliance)
+        // console.log($('.annotation-text')[0].innerHTML);
+        console.log(donutChartData['values']);
+        let values = [
+          data['Television'].reduce((a,b)=>a+b,0),
+          data['Lights'].reduce((a,b)=>a+b,0),
+          data['AC'].reduce((a,b)=>a+b,0),
+          data['Fridge'].reduce((a,b)=>a+b,0),
+          data['XBox'].reduce((a,b)=>a+b,0)
+        ];
+        var percent = Math.floor(data[appliance].reduce((a,b)=>a+b,0) / values.reduce((a,b)=>a+b,0)*100) + '%'
+        $('.annotation-text')[0].innerHTML = percent
+      })
     </script>
 
 </body>
