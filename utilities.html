@@ -306,6 +306,10 @@
         var percent = Math.floor(data[appliance].reduce((a,b)=>a+b,0) / values.reduce((a,b)=>a+b,0)*100) + '%'
         $('.annotation-text')[0].innerHTML = percent
       })
+
+      $('g .slice').mouseleave((e)=>{
+        $('.annotation-text')[0].innerHTML = ''
+      })
     </script>
 
 </body>
