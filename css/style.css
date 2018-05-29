@@ -225,9 +225,9 @@ h6 {
 }
 .statstext {
   font-size: 2em;
-  width: 90%;
-  margin-left: 5%;
-  margin-bottom: 0;
+  /* width: 90%; */
+  /* margin-left: 5%; */
+  /* margin-bottom: 0; */
 }
 .infotext {
   font-size: 2em;
