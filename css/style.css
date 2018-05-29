@@ -229,6 +229,19 @@ h6 {
   /* margin-left: 5%; */
   /* margin-bottom: 0; */
 }
+.statstextwrapper {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+.trophies img {
+  width: 10%;
+  height: 10%;
+  margin: 3%;
+}
+.trophies {
+  padding-left: 2%;
+  /* margin-top: 2%; */
+}
 .infotext {
   font-size: 2em;
   width: 50%;
