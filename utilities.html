@@ -305,10 +305,15 @@
         ];
         var percent = Math.floor(data[appliance].reduce((a,b)=>a+b,0) / values.reduce((a,b)=>a+b,0)*100) + '%'
         $('.annotation-text')[0].innerHTML = percent
+
+        var filteredLineChartData = lineChartData.filter(data => data.name == appliance)
+        Plotly.newPlot('extra-area-chart-plotly', filteredLineChartData, layoutLine, {displayModeBar: false});
+
       })
 
       $('g .slice').mouseleave((e)=>{
         $('.annotation-text')[0].innerHTML = ''
+        Plotly.newPlot('extra-area-chart-plotly', lineChartData, layoutLine, {displayModeBar: false});
       })
     </script>
 
