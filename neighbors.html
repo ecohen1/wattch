@@ -85,30 +85,94 @@
                 <div class="">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="./index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active"><a class="currentcrumb" href='./utilities.html'>Appliances</a></li>
+                        <li class="breadcrumb-item active"><a class="currentcrumb" href='./utilities.html'>Neighbors</a></li>
                     </ol>
                 </div>
             </div>
             <!-- End Bread crumb -->
             <!-- Container fluid  -->
             <div class="container-fluid">
+                <div class="leaderboardtitle">
+                  Your Stats
+                </div>
+                <div class="bg-white m-l-0 m-r-0 box-shadow" style="width: 75%; margin-left: 12.5% !important; text-align: center">
+                  <br></br>
+                  <div class="">
+                    <p class="statstext">Average Neighbor Bill (2 Bed / 1 Bath): <span style="color: #d6c700">$71.96</span></p>
+                  </div>
+                  <br></br>
+                  <div class="">
+                    <p class="statstext"><span style="color: #bf0000">60%</span> of Neighbors Paying Less Than You</p>
+                  </div>
+                  <br></br>
+                </div>
 
-                <div class="row bg-white m-l-0 m-r-0 box-shadow">
+                <br></br>
 
+                <div class="leaderboardtitle">
+                  Leaderboard
+                </div>
+
+                <div class="row" style="width: 100%; text-align:center; margin-top: 1%; margin-bottom: 1%;">
+                  <!-- column -->
+                  <div class="col-lg-2">
+                      <div class="leaderboardsection">
+                        <strong>Rank</strong>
+                      </div>
+                  </div>
+
+                  <!-- column -->
+                  <div class="col-lg-4">
+                      <div class="leaderboardsection">
+                        <strong>Last week's bill</strong>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                      <div class="leaderboardsection">
+                        <strong>Trophies</strong>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-2">
+                      <div class="leaderboardsection">
+                        <strong>Last Rank</strong>
+                      </div>
+                  </div>
+
+                </div>
+
+                <div class="row bg-white m-l-0 m-r-0 box-shadow leaderboard">
+
+                  <div class="row" style="width: 100%; text-align:center; margin-top: 1%; margin-bottom: 1%;">
                     <!-- column -->
-                    <div class="col-lg-4">
-                        <div id="donut-example-plotly">
+                    <div class="col-lg-2">
+                        <div class="leaderboardsection">
+                          <strong>1</strong>
                         </div>
                     </div>
 
                     <!-- column -->
-                    <div class="col-lg-8">
-                        <div id="extra-area-chart-plotly"></div>
+                    <div class="col-lg-4">
+                        <div class="leaderboardsection">
+                          $56.21
+                        </div>
                     </div>
-                    <!-- column -->
 
+                    <div class="col-lg-4">
+                        <div class="leaderboardsection">
+                          trophy1,trophy2
+                        </div>
+                    </div>
 
-                    <!-- column -->
+                    <div class="col-lg-2">
+                        <div class="leaderboardsection">
+                          <span style="color: green">4</span>
+                        </div>
+                    </div>
+
+                  </div>
+
                 </div>
 
             </div>
@@ -153,169 +217,7 @@
     <script src="js/custom.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script type="text/javascript">
-      var data = {
-        'Television': [35,32,25,20,23,17,15],
-        'Lights': [20,21,20,23,20,17,25],
-        'AC': [8,9,12,5,7,7,10],
-        'Fridge': [28,27,30,30,35,43,45],
-        'XBox': [5,5,5,5,5,5,5],
-      }
 
-      var dates = ['2018-05-01','2018-05-02','2018-05-03','2018-05-04','2018-05-05','2018-05-06','2018-05-07']
-
-      var lineChartData = [
-        {
-          type: "scatter",
-          mode: "lines",
-          name: 'Fridge',
-          x: dates,
-          y: data['Fridge'],
-          line: {color: '#ffb64d'}
-        },
-        {
-          type: "scatter",
-          mode: "lines",
-          name: 'Television',
-          x: dates,
-          y: data['Television'],
-          line: {color: '#26DAD2'}
-        },
-        {
-          type: "scatter",
-          mode: "lines",
-          name: 'Lights',
-          x: dates,
-          y: data['Lights'],
-          line: {color: '#fc6180'}
-        },
-        {
-          type: "scatter",
-          mode: "lines",
-          name: 'AC',
-          x: dates,
-          y: data['AC'],
-          line: {color: '#62d1f3'}
-        },
-        {
-          type: "scatter",
-          mode: "lines",
-          name: 'XBox',
-          x: dates,
-          y: data['XBox'],
-          line: {color: '#4680ff'}
-        }
-      ]
-
-      var layoutLine = {
-        title: 'Daily Energy Usage by Appliance (kW)',
-        xaxis: {
-          range: ['2018-05-01', '2018-05-07'],
-          type: 'date'
-        },
-        yaxis: {
-          autorange: false,
-          range: [0, 50],
-          type: 'linear'
-        },
-        showlegend: false,
-        height: 450,
-        titlefont: {
-          size: 20,
-          color: '#475a64'
-        },
-      };
-      Plotly.newPlot('extra-area-chart-plotly', lineChartData, layoutLine, {displayModeBar: false});
-
-      var donutChartData = [{
-        values: [
-          data['Television'].reduce((a,b)=>a+b,0),
-          data['Lights'].reduce((a,b)=>a+b,0),
-          data['AC'].reduce((a,b)=>a+b,0),
-          data['Fridge'].reduce((a,b)=>a+b,0),
-          data['XBox'].reduce((a,b)=>a+b,0)
-        ],
-        textfont: {
-          family: 'sans serif',
-          size: 16,
-          color: 'white'
-        },
-        labels: ['Television','Lights','AC','Fridge','XBox'],
-        name: 'Cumulative Usage This Month',
-        textinfo: 'label',
-        hoverinfo: 'label',
-        // hoverinfo: 'label+value+percent',
-        hole: .4,
-        type: 'pie',
-        marker: {
-          colors: [ '#26DAD2', '#fc6180', '#62d1f3', '#ffb64d', '#4680ff', '#ABC123' ],
-        },
-        // text: 'test',
-        // textposition: 'inside',
-      }];
-
-      var layoutDonut = {
-        title: 'Cumulative Usage This Month',
-        showlegend: false,
-        titlefont: {
-          size: 20,
-          color: '#475a64'
-        },
-        annotations: [
-          {
-            font: {
-              size: 20
-            },
-            showarrow: false,
-            text: '',
-            x: 0.51,
-            y: 0.48
-          },
-        ],
-        // legend: {
-        //   x:0,
-        // },
-        // annotations: [
-        //   {
-        //     font: {
-        //       size: 20
-        //     },
-        //     showarrow: false,
-        //     text: 'GHG',
-        //     x: 0.17,
-        //     y: 0.5
-        //   }
-        // ],
-        height: 450,
-        // width: 600
-        };
-
-      Plotly.newPlot('donut-example-plotly', donutChartData, layoutDonut, {displayModeBar: false});
-
-      // $('.surface').hover((e)=>console.log(e.target))
-      $('g .slice').hover((e)=>{
-        var appliance = $($(e)[0].currentTarget.children[1]).html().toString().split('>')[1].split('<')[0];
-        // console.log(appliance)
-        // console.log($('.annotation-text')[0].innerHTML);
-        console.log(donutChartData['values']);
-        let values = [
-          data['Television'].reduce((a,b)=>a+b,0),
-          data['Lights'].reduce((a,b)=>a+b,0),
-          data['AC'].reduce((a,b)=>a+b,0),
-          data['Fridge'].reduce((a,b)=>a+b,0),
-          data['XBox'].reduce((a,b)=>a+b,0)
-        ];
-        var percent = Math.floor(data[appliance].reduce((a,b)=>a+b,0) / values.reduce((a,b)=>a+b,0)*100) + '%'
-        $('.annotation-text')[0].innerHTML = percent
-
-        var filteredLineChartData = lineChartData.filter(data => data.name == appliance)
-        Plotly.newPlot('extra-area-chart-plotly', filteredLineChartData, layoutLine, {displayModeBar: false});
-
-      })
-
-      $('g .slice').mouseleave((e)=>{
-        $('.annotation-text')[0].innerHTML = ''
-        Plotly.newPlot('extra-area-chart-plotly', lineChartData, layoutLine, {displayModeBar: false});
-      })
     </script>
 
 </body>
