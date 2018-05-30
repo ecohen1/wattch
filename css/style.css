@@ -2359,7 +2359,7 @@ g .slicetext {
   /* margin-top: 20px; */
 }
 
-.tooltiptext {
+.trophies .tooltiptext {
     visibility: hidden;
     /* width: 120px; */
 
@@ -2371,8 +2371,11 @@ g .slicetext {
     font-family: 'Open Sans', sans-serif;
     font-size: 2em;
 
+    display: block;
+    padding: 10px 10px;
+
+
     text-align: center;
-    padding: 5px 0;
     border-radius: 6px;
 
     /* Position the tooltip text - see examples below! */
@@ -2385,6 +2388,43 @@ g .slicetext {
     visibility: visible;
 }
 
+.ldbtrophies {
+  display: inline;
+}
+
+.ldbtrophies .trophywrapper {
+  display: inline;
+}
+
+.ldbtrophies img {
+  height: 100%;
+}
+
+.ldbtrophies .tooltiptext {
+      visibility: hidden;
+      /* width: 120px; */
+
+      /* background-color: black; */
+      /* background-color: #FF9708; */
+      background-color: #ffb959;
+
+      line-height: 15px;
+
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.5em;
+
+      margin-left: 5%;
+      margin-top: 5%;
+
+      text-align: center;
+      padding: 10px 10px;
+      border-radius: 6px;
+
+      /* Position the tooltip text - see examples below! */
+      position: absolute;
+      z-index: 1;
+}
 
 .leaderboardtitle {
   font-size: 2em;
