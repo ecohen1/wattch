@@ -240,13 +240,19 @@ h6 {
   margin-left: 3%;
   margin-right: 3%;
 }
-.trophies img {
+.trophies div {
   width: 10%;
   height: 10%;
   margin: 3%;
 }
+.trophies div img {
+  width: 100%;
+  height: 100%;
+  /* margin: 3%; */
+}
 .trophies {
   padding-left: 2%;
+  /* display: inline-block; */
   /* margin-top: 2%; */
 }
 .infotext {
@@ -2350,8 +2356,35 @@ g .slicetext {
 }
 
 .leaderboard {
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
+
+.tooltiptext {
+    visibility: hidden;
+    /* width: 120px; */
+
+    /* background-color: black; */
+    /* background-color: #FF9708; */
+    background-color: #ffb959;
+
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.trophywrapper:hover .tooltiptext {
+    visibility: visible;
+}
+
 
 .leaderboardtitle {
   font-size: 2em;
