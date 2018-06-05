@@ -2470,8 +2470,8 @@ g .slicetext {
 }
 
 .row input {
-  width: 50%;
-  margin-left: 25%;
+  width: 100%;
+  /* margin-left: 25%; */
 }
 
 .continueButton {
