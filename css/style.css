@@ -2448,6 +2448,44 @@ g .slicetext {
   box-shadow: 10px 10px #e5e7ea;
 }
 
+.loginForm {
+  display: flex;
+  float: right;
+  position: fixed;
+  right: 0;
+  padding-right: 5%;
+}
+
+.signUp {
+  margin-top: 5%;
+}
+
+.signUp a {
+  text-decoration: underline;
+}
+
+.header input {
+  width: 100%;
+  margin: 0 1%;
+}
+
+.row input {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.continueButton {
+  margin-left: 0 !important;
+}
+
+.signUpButton {
+  margin-left: 0 !important;
+}
+
+.backButton {
+  margin-left: 0 !important;
+}
+
 .dashbuttoncircle {
   height: 20px;
   width: 20px;

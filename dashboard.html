@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Property of ElaAdmin, this has been repurposed for Northwestern's EECS 330 class -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="wattchfavicon.png">
+    <title>Wattch</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+
+    <link href="css/lib/calendar2/semantic.ui.min.css" rel="stylesheet">
+    <link href="css/lib/calendar2/pignose.calendar.min.css" rel="stylesheet">
+    <link href="css/lib/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/lib/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
+    <!--[if lt IE 9]>
+    <script src="https:**oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https:**oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar">
+    <!-- Preloader - style you can find in spinners.css -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+			<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- Main wrapper  -->
+    <div id="main-wrapper">
+        <!-- header header  -->
+        <div class="header" style="zoom: 100%">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <!-- Logo -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="dashboard.html">
+                        <!-- Logo icon -->
+                        <b><img src="wattchlogo.png" alt="homepage" class="dark-logo" height=70 width=300 style="margin: 10px"/></b>
+                        <!--End Logo icon -->
+                        <!-- Logo text -->
+                        <!-- <span><img src="images/logo-text.png" alt="homepage" class="dark-logo" /></span> -->
+                    </a>
+                </div>
+                <!-- End Logo -->
+                <div class="navbar-collapse">
+                    <!-- toggle and nav items -->
+                    <!-- <ul class="navbar-nav mr-auto mt-md-0"> -->
+                        <!-- This is  -->
+                        <!-- <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted  " href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li> -->
+                        <!-- <li class="nav-item m-l-10"> <a class="nav-link sidebartoggler hidden-sm-down text-muted  " href="javascript:void(0)"><i class="ti-menu"></i></a> </li> -->
+                        <!-- Messages -->
+
+                        <!-- End Messages -->
+                    <!-- </ul> -->
+                    <!-- User profile and search -->
+                    <ul class="navbar-nav my-lg-0 navaccount">
+                      <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/users/ad.png" alt="user" class="profile-pic" /></a>
+                            <div class="dropdown-menu dropdown-menu-right animated zoomIn">
+                                <ul class="dropdown-user">
+                                  <li><a href="./dashboard.html"> Dashboard</a></li>
+                                  <li><a href="./utilities.html"> Appliances</a></li>
+                                  <li><a href="./monthlyusage.html"> Monthly Usage</a></li>
+                                    <li><a href="./index.html"> Log Out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End header header -->
+
+        <!-- Page wrapper  -->
+        <div class="page-wrapper">
+            <!-- Bread crumb -->
+            <div class="row page-titles" style="zoom: 100%">
+                <div class="">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active"><a class="currentcrumb" href='./dashboard.html'>Dashboard</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- End Bread crumb -->
+            <!-- Container fluid  -->
+            <div class="container-fluid" style="zoom: 75%">
+                <!-- Start Page Content -->
+                <!-- <div class="row" style="text-align: center; margin-bottom: 2%; margin-top: 2%;"> -->
+                  <!-- <p class="welcometext">Hi Adwaiy,<span style="color: #f79a43;"> your energy usage is lower than last month!</span></p> -->
+                  <!-- <p class="infotext">Your energy usage is lower than last month.</p> -->
+                <!-- </div> -->
+                <div class="row">
+
+                    <div class="col-md-4 dashbuttoncontainer" style="text-align: center">
+                      <p class="m-b-0 dashbuttontitle" color="#475a64">Usage</p>
+                      <a href="monthlyusage.html">
+                        <div class="card p-30 dashbutton">
+                          <div class="dashbuttoncircle"></div>
+                            <div class="media" style="display: block">
+                                <!-- <div class="media-left meida media-middle">
+                                    <span></span>
+                                </div> -->
+                                <br></br>
+                                <div class="media-body" style="text-align: center;">
+                                    <h1>&#36;71.65</h1>
+                                    <p class="m-b-0 dashbuttontitle">Current Monthly Utility Bill (May)</p>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <div class="media-body" style="text-align: center;">
+                                    <h1 style="color: #3edd16">-$17.27</h1>
+                                    <p class="m-b-0 dashbuttontitle">From Last Month (April)</p>
+                                </div>
+                                <br></br>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-4 dashbuttoncontainer" style="text-align: center">
+                      <p class="m-b-0 dashbuttontitle" color="#475a64">Appliances</p>
+                      <a href="utilities.html">
+                        <div class="card dashbutton" style="text-align: center; padding-top: 5%">
+                          <div class="dashbuttoncircle"></div>
+                            <div class="media">
+                                <div class="">
+                                    <!-- <span><i class="fa fa-archive f-s-40 color-warning"></i></span> -->
+                                    <img src="./images/fridge.png" height="100" width="100"/>
+                                </div>
+                                <div class="media-body media-text-right" style="margin-top: 10%;margin-bottom: 10%;height: 80%;">
+                                  <h1 style="color: #f78a43">37%</h1>
+                                </div>
+                            </div>
+                            <hr class="hr-appliance"></hr>
+                            <div class="media">
+                                <div class="media-left meida media-middle">
+                                    <!-- <span><i class="fa fa-archive f-s-40 color-warning"></i></span> -->
+                                    <img src="./images/tv.png" height="100" width="100"/>
+                                </div>
+                                <div class="media-body media-text-right" style="margin-top: 10%;margin-bottom: 10%;height: 80%;">
+                                    <h1 style="color: #f79a43">26%</h1>
+                                </div>
+                            </div>
+                            <hr class="hr-appliance"></hr>
+                            <div class="media">
+                                <div class="media-left meida media-middle">
+                                    <!-- <span><i class="fa fa-archive f-s-40 color-warning"></i></span> -->
+                                    <img src="./images/lights.png" height="100" width="100"/>
+                                </div>
+                                <div class="media-body media-text-right" style="margin-top: 10%;margin-bottom: 10%;height: 80%;">
+                                    <h1 style="color: #f7aa43">23%</h1>
+                                </div>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div class="col-md-4 dashbuttoncontainer" style="text-align: center">
+                      <p class="m-b-0 dashbuttontitle" color="#475a64">Neighbors</p>
+                      <a href="neighbors.html">
+                        <div class="card p-30 dashbutton">
+                            <div class="dashbuttoncircle"></div>
+                            <div class="media" style="display: block">
+                                <!-- <div class="media-left meida media-middle">
+                                    <span></span>
+                                </div> -->
+                                <br></br>
+                                <div class="media-body" style="text-align: center;">
+                                    <h1>&#36;119.62</h1>
+                                    <p class="m-b-0 dashbuttontitle">Average Neighbor Bill</p>
+                                    <p></p>
+                                    <p class="m-b-0 dashbuttontitle">(2 Bed / 1 Bath)</p>
+                                    <p></p>
+                                    <p></p>
+                                </div>
+                                <br></br>
+                                <div class="media-body" style="text-align: center;">
+                                    <h1 style="color: #3edd16">23%</h1>
+                                    <p class="m-b-0 dashbuttontitle">of Neighbors Paying Less</p>
+                                </div>
+                                <br></br>
+                            </div>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+
+                <p class="m-b-0 dashbuttontitle" style="width: 40%;margin-left: 30%;text-align: center">Your Trophies</p>
+                <div class="trophies row bg-white m-l-0 m-r-0 box-shadow" style="width: 45%;margin-left:27.5% !important;margin-top: 15px">
+                  <div class="trophywrapper">
+                    <span class="award1tooltip tooltiptext">Decrease Monthly Bill by $15</span>
+                    <img class="trophyimage" src="images/trophies/award1.png"/>
+                  </div>
+                  <div class="trophywrapper">
+                    <span class="award2tooltip tooltiptext">Decrease Monthly Bill by $30</span>
+                    <img class="trophyimage" src="images/trophies/award2grey.png" />
+                  </div>
+                  <div class="trophywrapper">
+                    <span class="award3tooltip tooltiptext">Spend less than 70% of Neighbors</span>
+                    <img class="trophyimage" src="images/trophies/award3.png" />
+                  </div>
+                  <div class="trophywrapper">
+                    <span class="award4tooltip tooltiptext">Spend less than 85% of Neighbors</span>
+                    <img class="trophyimage" src="images/trophies/award4.png" />
+                  </div>
+                  <div class="trophywrapper">
+                    <span class="award5tooltip tooltiptext">Spend less than 95% of Neighbors</span>
+                    <img class="trophyimage" src="images/trophies/award5grey.png" />
+                  </div>
+                  <div class="trophywrapper">
+                    <span class="award6tooltip tooltiptext">Lowest Energy Usage in Neighborhood</span>
+                    <img class="trophyimage" src="images/trophies/award6grey.png" />
+                  </div>
+                <!-- End PAge Content -->
+                </div>
+            <!-- End Container fluid  -->
+            <!-- footer -->
+            <!-- End footer -->
+            </div>
+        <!-- End Page wrapper  -->
+    </div>
+    <!-- End Wrapper -->
+    <!-- All Jquery -->
+    <script src="js/lib/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="js/lib/bootstrap/js/popper.min.js"></script>
+    <script src="js/lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Menu sidebar -->
+    <script src="js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="js/lib/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+
+
+    <!-- Amchart -->
+     <script src="js/lib/morris-chart/raphael-min.js"></script>
+    <script src="js/lib/morris-chart/morris.js"></script>
+    <!--<script src="js/lib/morris-chart/dashboard1-init.js"></script>-->
+    <script src="js/lib/calendar-2/semantic.ui.min.js"></script>
+
+<!--
+	<script src="js/lib/calendar-2/moment.latest.min.js"></script>
+    <script src="js/lib/calendar-2/prism.min.js"></script>
+    <script src="js/lib/calendar-2/pignose.calendar.min.js"></script>
+    <script src="js/lib/calendar-2/pignose.init.js"></script>-->
+
+    <script src="js/lib/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/lib/owl-carousel/owl.carousel-init.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- scripit init-->
+
+    <script src="js/custom.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</body>
+
+</html>
