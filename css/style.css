@@ -2469,20 +2469,30 @@ g .slicetext {
   margin: 0 1%;
 }
 
-.row input {
-  width: 100%;
-  /* margin-left: 25%; */
-}
-
 .continueButton {
+  background-color: #FF9700 !important;
+  border-color: white !important;
   margin-left: 0 !important;
+  width: 30%;
 }
 
 .signUpButton {
+  background-color: #FF9700 !important;
+  border-color: white !important;
   margin-left: 0 !important;
+  width: 30%;
 }
 
 .backButton {
+  background-color: #A7A7A7 !important;
+  border-color: white !important;
+  margin-left: 0 !important;
+  width: 30%;
+}
+
+.loginButton {
+  background-color: #FF9700 !important;
+  border-color: white !important;
   margin-left: 0 !important;
 }
 

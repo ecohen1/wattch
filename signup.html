@@ -56,7 +56,7 @@
                 <form action="./dashboard.html" class="loginForm">
                   <input type="text" class="form-control" placeholder="Email" value="">
                   <input type="text" class="form-control" placeholder="Password" value="">
-                  <input type="submit" value="Login">
+                  <input type="submit" class="loginButton btn btn-info" value="Login">
                 </form>
             </nav>
         </div>
@@ -91,6 +91,7 @@
                                           # of Roommates
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('0')">0</a>
                                           <a class="dropdown-item" href="#" onclick="chooseRoommates('1')">1</a>
                                           <a class="dropdown-item" href="#" onclick="chooseRoommates('2')">2</a>
                                           <a class="dropdown-item" href="#" onclick="chooseRoommates('3')">3</a>
