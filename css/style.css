@@ -2502,9 +2502,11 @@ g .slicetext {
 }
 
 .benefits p {
-  font-size: 2em;
-  line-height: 30px !important;
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 50px !important;
   color: #FF9700 !important;
+  margin: 20px 0;
 }
 
 .benefits li {
