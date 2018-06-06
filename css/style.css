@@ -2504,6 +2504,7 @@ g .slicetext {
 .benefits p {
   font-size: 2em;
   line-height: 30px !important;
+  color: #FF9700 !important;
 }
 
 .benefits li {
