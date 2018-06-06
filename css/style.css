@@ -2498,6 +2498,16 @@ g .slicetext {
 
 .page-wrapper-index {
   background-image: url(../loginpage.jpg) !important;
+  background-size: cover;
+}
+
+.benefits p {
+  font-size: 2em;
+  line-height: 30px !important;
+}
+
+.benefits li {
+  margin: 10px 0;
 }
 
 .dashbuttoncircle {
