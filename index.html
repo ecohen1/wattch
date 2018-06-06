@@ -31,7 +31,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar">
+<body class="fix-header fix-sidebar bodyImage">
     <!-- Preloader - style you can find in spinners.css -->
     <div class="preloader">
         <svg class="circular" viewBox="25 25 50 50">
@@ -80,10 +80,10 @@
 
                       <p class="m-b-0 dashbuttontitle" color="#475a64">Sign Up and Start Saving Today!</p>
 
-                      <div class="card p-30">
+                      <div class="card p-30 signupFormCard">
                           <div class="media" style="display: block">
                               <div class="media-body" style="text-align: center;">
-                                <form action="./signup.html" class="signUpForm">
+                                <form action="./dashboard.html" class="signUpForm">
                                   <div class="row">
                                     <div class="col-md-6" style="text-align: center">
                                       <input type="text" class="form-control" placeholder="First Name" value=""><br/>
@@ -112,9 +112,60 @@
                                       <input type="text" class="form-control" placeholder="Zip Code" value=""><br/>
                                     </div>
                                   </div>
+                                  <div class="row">
+                                    <div class="col-md-4" style="text-align: center">
+                                      <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle chooseRoommates" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          # of Roommates
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('0')">0</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('1')">1</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('2')">2</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('3')">3</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseRoommates('4+')">4+</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: center">
+                                      <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle chooseBedrooms" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          # of Bedrooms
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#" onclick="chooseBedrooms('1')">1</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBedrooms('2')">2</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBedrooms('3')">3</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBedrooms('4+')">4+</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-md-4" style="text-align: center">
+                                      <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle chooseBathrooms" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          # of Bathrooms
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#" onclick="chooseBathrooms('1')">1</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBathrooms('2')">2</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBathrooms('3')">3</a>
+                                          <a class="dropdown-item" href="#" onclick="chooseBathrooms('4+')">4+</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <br/>
+                                <div class="row">
+                                  <div class="col-md-6" style="text-align: center">
+                                    <input type="text" class="form-control" placeholder="ComEd Username" value=""><br/>
+                                  </div>
+                                  <div class="col-md-6" style="text-align: center">
+                                    <input type="text" class="form-control" placeholder="ComEd Password" value=""><br/>
+                                  </div>
+                                </div>
 
-                                  <br/>
-                                  <input type="submit" class="continueButton btn btn-info" value="Continue">
+                                <input type="submit" class="continueButton btn btn-info" value="Continue">
                                 </form>
                                 <!-- Don't have an account? <a href="./signup.html">Sign up here!</a> -->
                               </div>
@@ -166,6 +217,32 @@
 
     <script src="js/custom.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+      function chooseRoommates(a) {
+        var text = a + ' Roommate'
+        if (a != '1') {
+          text += 's'
+        }
+        $('.chooseRoommates').html(text)
+      }
+
+      function chooseBedrooms(a) {
+        var text = a + ' Bedroom'
+        if (a != '1') {
+          text += 's'
+        }
+        $('.chooseBedrooms').html(text)
+      }
+
+      function chooseBathrooms(a) {
+        var text = a + ' Bathroom'
+        if (a != '1') {
+          text += 's'
+        }
+        $('.chooseBathrooms').html(text)
+      }
+    </script>
+
 
 </body>
 

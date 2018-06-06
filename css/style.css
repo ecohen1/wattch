@@ -2496,6 +2496,10 @@ g .slicetext {
   margin-left: 0 !important;
 }
 
+.page-wrapper {
+  background-image: url(../loginpage.jpg) !important;
+}
+
 .dashbuttoncircle {
   height: 20px;
   width: 20px;
