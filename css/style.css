@@ -2501,6 +2501,11 @@ g .slicetext {
   background-size: cover;
 }
 
+.benefits {
+  background-color: rgb(255,255,255,0.5);
+  padding: 10px;
+}
+
 .benefits p {
   font-size: 3em;
   font-weight: bold;
